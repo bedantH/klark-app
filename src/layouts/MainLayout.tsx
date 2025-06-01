@@ -124,15 +124,7 @@ const MainLayout = () => {
               prose-h1:my-0 prose-h2:my-0 prose-h3:my-0 prose-h4:my-0 prose-h5:my-0 prose-h6:my-0
               prose-headings:mt-0 prose-headings:mb-0 prose-p:mt-0 prose-a:text-blue-600"
               >
-                <ReactMarkdown
-                  components={{
-                    ul: ({ children }) => (
-                      <ul className="list-disc pl-4 space-y-1">{children}</ul>
-                    ),
-                    li: ({ children }) => <li>{children}</li>,
-                    p: ({ children }) => <p className="my-0">{children}</p>,
-                  }}
-                >
+                <ReactMarkdown>
                   {/* remove <think></think> from the repsonse */}
                   {response
                     .replace(/<think>/g, "")
